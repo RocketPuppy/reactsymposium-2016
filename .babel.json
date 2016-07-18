@@ -1,0 +1,576 @@
+{
+  "{\"filename\":\"/home/dwilson/reactconf-tests/test/example.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false}:6.9.1": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "../src",
+            "imported": [
+              "todoReducer",
+              "deleteTodo"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "todoReducer",
+                "local": "todoReducer"
+              },
+              {
+                "kind": "named",
+                "imported": "deleteTodo",
+                "local": "deleteTodo"
+              }
+            ]
+          },
+          {
+            "source": "chai",
+            "imported": [
+              "assert"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "assert",
+                "local": "assert"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/home/dwilson/reactconf-tests/test/example.js",
+      "filenameRelative": "/home/dwilson/reactconf-tests/test/example.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMap": "both",
+      "sourceMaps": "both",
+      "sourceMapTarget": "example.js",
+      "sourceFileName": "example.js",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "basename": "example"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _src = require('../src');\n\nvar _chai = require('chai');\n\ndescribe('when the todo exists alone', function () {\n  var theTodo = { text: 'foo' };\n  var state = [theTodo];\n\n  it('removes the todo', function () {\n    var newState = (0, _src.todoReducer)(state, (0, _src.deleteTodo)('foo'));\n\n    (0, _chai.assert)(!newState.includes(theTodo), 'newState includes todo');\n  });\n});\n\ndescribe('when there are no todos', function () {\n  var state = [];\n\n  it('returns the state unchanged', function () {\n    _chai.assert.deepEqual((0, _src.todoReducer)(state, (0, _src.deleteTodo)('foo')), state);\n  });\n});\n\ndescribe('when the todo exists with other todos', function () {\n  var firstTodo = { text: 'foo' };\n  var secondTodo = { text: 'bar' };\n  var state = [firstTodo, secondTodo];\n\n  it('removes the target todo', function () {\n    var newState = (0, _src.todoReducer)(state, (0, _src.deleteTodo)('foo'));\n\n    (0, _chai.assert)(!newState.includes(firstTodo));\n  });\n\n  it('leaves the other todos', function () {\n    var newState = (0, _src.todoReducer)(state, (0, _src.deleteTodo)('foo'));\n\n    (0, _chai.assert)(newState.includes(secondTodo));\n  });\n});\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV4YW1wbGUuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7QUFDQTs7QUFFQSxTQUFTLDRCQUFULEVBQXVDLFlBQU07QUFDM0MsTUFBTSxVQUFVLEVBQUUsTUFBTSxLQUFSLEVBQWhCO0FBQ0EsTUFBTSxRQUFRLENBQUMsT0FBRCxDQUFkOztBQUVBLEtBQUcsa0JBQUgsRUFBdUIsWUFBTTtBQUMzQixRQUFNLFdBQVcsc0JBQVksS0FBWixFQUFtQixxQkFBVyxLQUFYLENBQW5CLENBQWpCOztBQUVBLHNCQUFPLENBQUMsU0FBUyxRQUFULENBQWtCLE9BQWxCLENBQVIsRUFBb0Msd0JBQXBDO0FBQ0QsR0FKRDtBQUtELENBVEQ7O0FBV0EsU0FBUyx5QkFBVCxFQUFvQyxZQUFNO0FBQ3hDLE1BQU0sUUFBUSxFQUFkOztBQUVBLEtBQUcsNkJBQUgsRUFBa0MsWUFBTTtBQUN0QyxpQkFBTyxTQUFQLENBQWlCLHNCQUFZLEtBQVosRUFBbUIscUJBQVcsS0FBWCxDQUFuQixDQUFqQixFQUF3RCxLQUF4RDtBQUNELEdBRkQ7QUFHRCxDQU5EOztBQVFBLFNBQVMsdUNBQVQsRUFBa0QsWUFBTTtBQUN0RCxNQUFNLFlBQVksRUFBRSxNQUFNLEtBQVIsRUFBbEI7QUFDQSxNQUFNLGFBQWEsRUFBRSxNQUFNLEtBQVIsRUFBbkI7QUFDQSxNQUFNLFFBQVEsQ0FBQyxTQUFELEVBQVksVUFBWixDQUFkOztBQUVBLEtBQUcseUJBQUgsRUFBOEIsWUFBTTtBQUNsQyxRQUFNLFdBQVcsc0JBQVksS0FBWixFQUFtQixxQkFBVyxLQUFYLENBQW5CLENBQWpCOztBQUVBLHNCQUFPLENBQUMsU0FBUyxRQUFULENBQWtCLFNBQWxCLENBQVI7QUFDRCxHQUpEOztBQU1BLEtBQUcsd0JBQUgsRUFBNkIsWUFBTTtBQUNqQyxRQUFNLFdBQVcsc0JBQVksS0FBWixFQUFtQixxQkFBVyxLQUFYLENBQW5CLENBQWpCOztBQUVBLHNCQUFPLFNBQVMsUUFBVCxDQUFrQixVQUFsQixDQUFQO0FBQ0QsR0FKRDtBQUtELENBaEJEIiwiZmlsZSI6ImV4YW1wbGUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB0b2RvUmVkdWNlciwgZGVsZXRlVG9kbyB9IGZyb20gJy4uL3NyYyc7XG5pbXBvcnQgeyBhc3NlcnQgfSBmcm9tICdjaGFpJztcblxuZGVzY3JpYmUoJ3doZW4gdGhlIHRvZG8gZXhpc3RzIGFsb25lJywgKCkgPT4ge1xuICBjb25zdCB0aGVUb2RvID0geyB0ZXh0OiAnZm9vJyB9O1xuICBjb25zdCBzdGF0ZSA9IFt0aGVUb2RvXTtcblxuICBpdCgncmVtb3ZlcyB0aGUgdG9kbycsICgpID0+IHtcbiAgICBjb25zdCBuZXdTdGF0ZSA9IHRvZG9SZWR1Y2VyKHN0YXRlLCBkZWxldGVUb2RvKCdmb28nKSk7XG5cbiAgICBhc3NlcnQoIW5ld1N0YXRlLmluY2x1ZGVzKHRoZVRvZG8pLCAnbmV3U3RhdGUgaW5jbHVkZXMgdG9kbycpO1xuICB9KTtcbn0pO1xuXG5kZXNjcmliZSgnd2hlbiB0aGVyZSBhcmUgbm8gdG9kb3MnLCAoKSA9PiB7XG4gIGNvbnN0IHN0YXRlID0gW107XG5cbiAgaXQoJ3JldHVybnMgdGhlIHN0YXRlIHVuY2hhbmdlZCcsICgpID0+IHtcbiAgICBhc3NlcnQuZGVlcEVxdWFsKHRvZG9SZWR1Y2VyKHN0YXRlLCBkZWxldGVUb2RvKCdmb28nKSksIHN0YXRlKVxuICB9KTtcbn0pO1xuXG5kZXNjcmliZSgnd2hlbiB0aGUgdG9kbyBleGlzdHMgd2l0aCBvdGhlciB0b2RvcycsICgpID0+IHtcbiAgY29uc3QgZmlyc3RUb2RvID0geyB0ZXh0OiAnZm9vJyB9O1xuICBjb25zdCBzZWNvbmRUb2RvID0geyB0ZXh0OiAnYmFyJyB9O1xuICBjb25zdCBzdGF0ZSA9IFtmaXJzdFRvZG8sIHNlY29uZFRvZG9dO1xuXG4gIGl0KCdyZW1vdmVzIHRoZSB0YXJnZXQgdG9kbycsICgpID0+IHtcbiAgICBjb25zdCBuZXdTdGF0ZSA9IHRvZG9SZWR1Y2VyKHN0YXRlLCBkZWxldGVUb2RvKCdmb28nKSk7XG5cbiAgICBhc3NlcnQoIW5ld1N0YXRlLmluY2x1ZGVzKGZpcnN0VG9kbykpO1xuICB9KTtcblxuICBpdCgnbGVhdmVzIHRoZSBvdGhlciB0b2RvcycsICgpID0+IHtcbiAgICBjb25zdCBuZXdTdGF0ZSA9IHRvZG9SZWR1Y2VyKHN0YXRlLCBkZWxldGVUb2RvKCdmb28nKSk7XG5cbiAgICBhc3NlcnQobmV3U3RhdGUuaW5jbHVkZXMoc2Vjb25kVG9kbykpO1xuICB9KTtcbn0pO1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "example.js"
+      ],
+      "names": [],
+      "mappings": ";;AAAA;;AACA;;AAEA,SAAS,4BAAT,EAAuC,YAAM;AAC3C,MAAM,UAAU,EAAE,MAAM,KAAR,EAAhB;AACA,MAAM,QAAQ,CAAC,OAAD,CAAd;;AAEA,KAAG,kBAAH,EAAuB,YAAM;AAC3B,QAAM,WAAW,sBAAY,KAAZ,EAAmB,qBAAW,KAAX,CAAnB,CAAjB;;AAEA,sBAAO,CAAC,SAAS,QAAT,CAAkB,OAAlB,CAAR,EAAoC,wBAApC;AACD,GAJD;AAKD,CATD;;AAWA,SAAS,yBAAT,EAAoC,YAAM;AACxC,MAAM,QAAQ,EAAd;;AAEA,KAAG,6BAAH,EAAkC,YAAM;AACtC,iBAAO,SAAP,CAAiB,sBAAY,KAAZ,EAAmB,qBAAW,KAAX,CAAnB,CAAjB,EAAwD,KAAxD;AACD,GAFD;AAGD,CAND;;AAQA,SAAS,uCAAT,EAAkD,YAAM;AACtD,MAAM,YAAY,EAAE,MAAM,KAAR,EAAlB;AACA,MAAM,aAAa,EAAE,MAAM,KAAR,EAAnB;AACA,MAAM,QAAQ,CAAC,SAAD,EAAY,UAAZ,CAAd;;AAEA,KAAG,yBAAH,EAA8B,YAAM;AAClC,QAAM,WAAW,sBAAY,KAAZ,EAAmB,qBAAW,KAAX,CAAnB,CAAjB;;AAEA,sBAAO,CAAC,SAAS,QAAT,CAAkB,SAAlB,CAAR;AACD,GAJD;;AAMA,KAAG,wBAAH,EAA6B,YAAM;AACjC,QAAM,WAAW,sBAAY,KAAZ,EAAmB,qBAAW,KAAX,CAAnB,CAAjB;;AAEA,sBAAO,SAAS,QAAT,CAAkB,UAAlB,CAAP;AACD,GAJD;AAKD,CAhBD",
+      "file": "example.js",
+      "sourcesContent": [
+        "import { todoReducer, deleteTodo } from '../src';\nimport { assert } from 'chai';\n\ndescribe('when the todo exists alone', () => {\n  const theTodo = { text: 'foo' };\n  const state = [theTodo];\n\n  it('removes the todo', () => {\n    const newState = todoReducer(state, deleteTodo('foo'));\n\n    assert(!newState.includes(theTodo), 'newState includes todo');\n  });\n});\n\ndescribe('when there are no todos', () => {\n  const state = [];\n\n  it('returns the state unchanged', () => {\n    assert.deepEqual(todoReducer(state, deleteTodo('foo')), state)\n  });\n});\n\ndescribe('when the todo exists with other todos', () => {\n  const firstTodo = { text: 'foo' };\n  const secondTodo = { text: 'bar' };\n  const state = [firstTodo, secondTodo];\n\n  it('removes the target todo', () => {\n    const newState = todoReducer(state, deleteTodo('foo'));\n\n    assert(!newState.includes(firstTodo));\n  });\n\n  it('leaves the other todos', () => {\n    const newState = todoReducer(state, deleteTodo('foo'));\n\n    assert(newState.includes(secondTodo));\n  });\n});\n"
+      ]
+    },
+    "mtime": 1465586643869
+  },
+  "{\"filename\":\"/home/dwilson/reactconf-tests/src/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false}:6.9.1": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "babel-polyfill",
+            "imported": [],
+            "specifiers": []
+          }
+        ],
+        "exports": {
+          "exported": [
+            "DELETE_TODO",
+            "deleteTodo",
+            "text",
+            "todoReducer",
+            "action",
+            "todos"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "DELETE_TODO",
+              "exported": "DELETE_TODO"
+            },
+            {
+              "kind": "local",
+              "local": "deleteTodo",
+              "exported": "deleteTodo"
+            },
+            {
+              "kind": "local",
+              "local": "text",
+              "exported": "text"
+            },
+            {
+              "kind": "local",
+              "local": "todoReducer",
+              "exported": "todoReducer"
+            },
+            {
+              "kind": "local",
+              "local": "action",
+              "exported": "action"
+            },
+            {
+              "kind": "local",
+              "local": "todos",
+              "exported": "todos"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/home/dwilson/reactconf-tests/src/index.js",
+      "filenameRelative": "/home/dwilson/reactconf-tests/src/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMap": "both",
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.DELETE_TODO = undefined;\nexports.deleteTodo = deleteTodo;\nexports.todoReducer = todoReducer;\n\nrequire('babel-polyfill');\n\nvar DELETE_TODO = exports.DELETE_TODO = 'DELETE_TODO';\n\nfunction deleteTodo(text) {\n  return {\n    type: DELETE_TODO,\n    text: text\n  };\n}\n\nvar initialState = [];\n\nfunction todoReducer() {\n  var todos = arguments.length <= 0 || arguments[0] === undefined ? initialState : arguments[0];\n  var action = arguments[1];\n\n  switch (action.type) {\n    case DELETE_TODO:\n      return todos.filter(function (todo) {\n        return todo.text !== action.text;\n      });\n  }\n}\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7OztRQUdnQixVLEdBQUEsVTtRQVNBLFcsR0FBQSxXOztBQVpoQjs7QUFDTyxJQUFNLG9DQUFjLGFBQXBCOztBQUVBLFNBQVMsVUFBVCxDQUFvQixJQUFwQixFQUEwQjtBQUMvQixTQUFPO0FBQ0wsVUFBTSxXQUREO0FBRUwsVUFBTTtBQUZELEdBQVA7QUFJRDs7QUFFRCxJQUFNLGVBQWUsRUFBckI7O0FBRU8sU0FBUyxXQUFULEdBQW1EO0FBQUEsTUFBOUIsS0FBOEIseURBQXRCLFlBQXNCO0FBQUEsTUFBUixNQUFROztBQUN4RCxVQUFPLE9BQU8sSUFBZDtBQUNBLFNBQUssV0FBTDtBQUNFLGFBQU8sTUFBTSxNQUFOLENBQWEsVUFBQyxJQUFEO0FBQUEsZUFBVSxLQUFLLElBQUwsS0FBYyxPQUFPLElBQS9CO0FBQUEsT0FBYixDQUFQO0FBRkY7QUFJRCIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAnYmFiZWwtcG9seWZpbGwnXG5leHBvcnQgY29uc3QgREVMRVRFX1RPRE8gPSAnREVMRVRFX1RPRE8nO1xuXG5leHBvcnQgZnVuY3Rpb24gZGVsZXRlVG9kbyh0ZXh0KSB7XG4gIHJldHVybiB7XG4gICAgdHlwZTogREVMRVRFX1RPRE8sXG4gICAgdGV4dDogdGV4dFxuICB9O1xufVxuXG5jb25zdCBpbml0aWFsU3RhdGUgPSBbXTtcblxuZXhwb3J0IGZ1bmN0aW9uIHRvZG9SZWR1Y2VyKHRvZG9zID0gaW5pdGlhbFN0YXRlLCBhY3Rpb24pIHtcbiAgc3dpdGNoKGFjdGlvbi50eXBlKSB7XG4gIGNhc2UoREVMRVRFX1RPRE8pOlxuICAgIHJldHVybiB0b2Rvcy5maWx0ZXIoKHRvZG8pID0+IHRvZG8udGV4dCAhPT0gYWN0aW9uLnRleHQpO1xuICB9XG59XG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [],
+      "mappings": ";;;;;;QAGgB,U,GAAA,U;QASA,W,GAAA,W;;AAZhB;;AACO,IAAM,oCAAc,aAApB;;AAEA,SAAS,UAAT,CAAoB,IAApB,EAA0B;AAC/B,SAAO;AACL,UAAM,WADD;AAEL,UAAM;AAFD,GAAP;AAID;;AAED,IAAM,eAAe,EAArB;;AAEO,SAAS,WAAT,GAAmD;AAAA,MAA9B,KAA8B,yDAAtB,YAAsB;AAAA,MAAR,MAAQ;;AACxD,UAAO,OAAO,IAAd;AACA,SAAK,WAAL;AACE,aAAO,MAAM,MAAN,CAAa,UAAC,IAAD;AAAA,eAAU,KAAK,IAAL,KAAc,OAAO,IAA/B;AAAA,OAAb,CAAP;AAFF;AAID",
+      "file": "index.js",
+      "sourcesContent": [
+        "import 'babel-polyfill'\nexport const DELETE_TODO = 'DELETE_TODO';\n\nexport function deleteTodo(text) {\n  return {\n    type: DELETE_TODO,\n    text: text\n  };\n}\n\nconst initialState = [];\n\nexport function todoReducer(todos = initialState, action) {\n  switch(action.type) {\n  case(DELETE_TODO):\n    return todos.filter((todo) => todo.text !== action.text);\n  }\n}\n"
+      ]
+    },
+    "mtime": 1465588841879
+  },
+  "{\"filename\":\"/home/dwilson/reactconf-tests/test/property.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false}:6.9.1": {
+    "metadata": {
+      "usedHelpers": [
+        "slicedToArray",
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "../src",
+            "imported": [
+              "todoReducer",
+              "deleteTodo",
+              "DELETE_TODO"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "todoReducer",
+                "local": "todoReducer"
+              },
+              {
+                "kind": "named",
+                "imported": "deleteTodo",
+                "local": "deleteTodo"
+              },
+              {
+                "kind": "named",
+                "imported": "DELETE_TODO",
+                "local": "DELETE_TODO"
+              }
+            ]
+          },
+          {
+            "source": "chai",
+            "imported": [
+              "assert"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "assert",
+                "local": "assert"
+              }
+            ]
+          },
+          {
+            "source": "jsverify",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "jsv"
+              }
+            ]
+          },
+          {
+            "source": "deep-equal",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "deepEqual"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/home/dwilson/reactconf-tests/test/property.js",
+      "filenameRelative": "/home/dwilson/reactconf-tests/test/property.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMap": "both",
+      "sourceMaps": "both",
+      "sourceMapTarget": "property.js",
+      "sourceFileName": "property.js",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "basename": "property"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"]) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); } }; }();\n\nvar _src = require('../src');\n\nvar _chai = require('chai');\n\nvar _jsverify = require('jsverify');\n\nvar _jsverify2 = _interopRequireDefault(_jsverify);\n\nvar _deepEqual = require('deep-equal');\n\nvar _deepEqual2 = _interopRequireDefault(_deepEqual);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar todoGenerator = _jsverify2.default.record({\n  text: _jsverify2.default.asciinestring\n});\n\nvar initialStateGenerator = _jsverify2.default.array(todoGenerator);\n\nvar initialStateWithTodo = _jsverify2.default.pair(todoGenerator, initialStateGenerator).smap(function (_ref) {\n  var _ref2 = _slicedToArray(_ref, 2);\n\n  var todo = _ref2[0];\n  var initialState = _ref2[1];\n  return [todo, initialState.concat(todo)];\n}, function (_ref3) {\n  var _ref4 = _slicedToArray(_ref3, 2);\n\n  var todo = _ref4[0];\n  var initialState = _ref4[1];\n  return [todo, initialState.slice(0, -1)];\n});\n\nvar initialStateWithoutTodo = _jsverify2.default.pair(todoGenerator, initialStateGenerator).smap(function (_ref5) {\n  var _ref6 = _slicedToArray(_ref5, 2);\n\n  var todo = _ref6[0];\n  var initialState = _ref6[1];\n  return [todo, initialState.filter(function (t) {\n    return t.text === todo.text;\n  })];\n}, function (_ref7) {\n  var _ref8 = _slicedToArray(_ref7, 2);\n\n  var todo = _ref8[0];\n  var initialState = _ref8[1];\n  return [todo, initialState.concat(todo)];\n});\n\ndescribe('when deleting a todo that exists', function () {\n  _jsverify2.default.property('it removes the todo', initialStateWithTodo, function (_ref9) {\n    var _ref10 = _slicedToArray(_ref9, 2);\n\n    var todo = _ref10[0];\n    var initialState = _ref10[1];\n\n    var newState = (0, _src.todoReducer)(initialState, (0, _src.deleteTodo)(todo.text));\n\n    return !newState.includes(todo);\n  });\n\n  it('it only removes a single todo', function () {\n    _jsverify2.default.assert(_jsverify2.default.forall(initialStateWithTodo, function (_ref11) {\n      var _ref12 = _slicedToArray(_ref11, 2);\n\n      var todo = _ref12[0];\n      var initialState = _ref12[1];\n\n      var newState = (0, _src.todoReducer)(initialState, (0, _src.deleteTodo)(todo.text));\n\n      return newState.length === initialState.length - 1;\n    }), { tests: 1000 });\n  });\n});\n\ndescribe('when deleting a todo that does not exist', function () {\n  _jsverify2.default.property('it does not modify the state', initialStateWithoutTodo, function (_ref13) {\n    var _ref14 = _slicedToArray(_ref13, 2);\n\n    var todo = _ref14[0];\n    var initialState = _ref14[1];\n\n    var newState = (0, _src.todoReducer)(initialState, (0, _src.deleteTodo)(todo.text));\n\n    return (0, _deepEqual2.default)(initialState, newState);\n  });\n});\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInByb3BlcnR5LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQTs7QUFDQTs7QUFDQTs7OztBQUNBOzs7Ozs7QUFFQSxJQUFNLGdCQUFnQixtQkFBSSxNQUFKLENBQVc7QUFDL0IsUUFBTSxtQkFBSTtBQURxQixDQUFYLENBQXRCOztBQUlBLElBQU0sd0JBQXdCLG1CQUFJLEtBQUosQ0FBVSxhQUFWLENBQTlCOztBQUVBLElBQU0sdUJBQXVCLG1CQUFJLElBQUosQ0FDM0IsYUFEMkIsRUFFM0IscUJBRjJCLEVBRzNCLElBSDJCLENBSTNCO0FBQUE7O0FBQUEsTUFBRSxJQUFGO0FBQUEsTUFBUSxZQUFSO0FBQUEsU0FBMEIsQ0FBQyxJQUFELEVBQU8sYUFBYSxNQUFiLENBQW9CLElBQXBCLENBQVAsQ0FBMUI7QUFBQSxDQUoyQixFQUszQjtBQUFBOztBQUFBLE1BQUUsSUFBRjtBQUFBLE1BQVEsWUFBUjtBQUFBLFNBQTBCLENBQUMsSUFBRCxFQUFPLGFBQWEsS0FBYixDQUFtQixDQUFuQixFQUFzQixDQUFDLENBQXZCLENBQVAsQ0FBMUI7QUFBQSxDQUwyQixDQUE3Qjs7QUFRQSxJQUFNLDBCQUEwQixtQkFBSSxJQUFKLENBQzlCLGFBRDhCLEVBRTlCLHFCQUY4QixFQUc5QixJQUg4QixDQUk5QjtBQUFBOztBQUFBLE1BQUUsSUFBRjtBQUFBLE1BQVEsWUFBUjtBQUFBLFNBQTBCLENBQUMsSUFBRCxFQUFPLGFBQWEsTUFBYixDQUFvQixVQUFDLENBQUQ7QUFBQSxXQUFPLEVBQUUsSUFBRixLQUFXLEtBQUssSUFBdkI7QUFBQSxHQUFwQixDQUFQLENBQTFCO0FBQUEsQ0FKOEIsRUFLOUI7QUFBQTs7QUFBQSxNQUFFLElBQUY7QUFBQSxNQUFRLFlBQVI7QUFBQSxTQUEwQixDQUFDLElBQUQsRUFBTyxhQUFhLE1BQWIsQ0FBb0IsSUFBcEIsQ0FBUCxDQUExQjtBQUFBLENBTDhCLENBQWhDOztBQVFBLFNBQVMsa0NBQVQsRUFBNkMsWUFBTTtBQUNqRCxxQkFBSSxRQUFKLENBQWEscUJBQWIsRUFBb0Msb0JBQXBDLEVBQ0UsaUJBQTBCO0FBQUE7O0FBQUEsUUFBeEIsSUFBd0I7QUFBQSxRQUFsQixZQUFrQjs7QUFDeEIsUUFBTSxXQUFXLHNCQUFZLFlBQVosRUFBMEIscUJBQVcsS0FBSyxJQUFoQixDQUExQixDQUFqQjs7QUFFQSxXQUFPLENBQUMsU0FBUyxRQUFULENBQWtCLElBQWxCLENBQVI7QUFDRCxHQUxIOztBQVFBLEtBQUcsK0JBQUgsRUFBb0MsWUFBTTtBQUN4Qyx1QkFBSSxNQUFKLENBQVcsbUJBQUksTUFBSixDQUFXLG9CQUFYLEVBQ1Qsa0JBQTBCO0FBQUE7O0FBQUEsVUFBeEIsSUFBd0I7QUFBQSxVQUFsQixZQUFrQjs7QUFDeEIsVUFBTSxXQUFXLHNCQUFZLFlBQVosRUFBMEIscUJBQVcsS0FBSyxJQUFoQixDQUExQixDQUFqQjs7QUFFQSxhQUFPLFNBQVMsTUFBVCxLQUFvQixhQUFhLE1BQWIsR0FBc0IsQ0FBakQ7QUFDRCxLQUxRLENBQVgsRUFNRyxFQUFFLE9BQU8sSUFBVCxFQU5IO0FBTW9CLEdBUHRCO0FBU0QsQ0FsQkQ7O0FBb0JBLFNBQVMsMENBQVQsRUFBcUQsWUFBTTtBQUN6RCxxQkFBSSxRQUFKLENBQWEsOEJBQWIsRUFBNkMsdUJBQTdDLEVBQ0Usa0JBQTBCO0FBQUE7O0FBQUEsUUFBeEIsSUFBd0I7QUFBQSxRQUFsQixZQUFrQjs7QUFDeEIsUUFBTSxXQUFXLHNCQUFZLFlBQVosRUFBMEIscUJBQVcsS0FBSyxJQUFoQixDQUExQixDQUFqQjs7QUFFQSxXQUFPLHlCQUFVLFlBQVYsRUFBd0IsUUFBeEIsQ0FBUDtBQUNELEdBTEg7QUFPRCxDQVJEIiwiZmlsZSI6InByb3BlcnR5LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgdG9kb1JlZHVjZXIsIGRlbGV0ZVRvZG8sIERFTEVURV9UT0RPIH0gZnJvbSAnLi4vc3JjJztcbmltcG9ydCB7IGFzc2VydCB9IGZyb20gJ2NoYWknO1xuaW1wb3J0IGpzdiBmcm9tICdqc3ZlcmlmeSc7XG5pbXBvcnQgZGVlcEVxdWFsIGZyb20gJ2RlZXAtZXF1YWwnO1xuXG5jb25zdCB0b2RvR2VuZXJhdG9yID0ganN2LnJlY29yZCh7XG4gIHRleHQ6IGpzdi5hc2NpaW5lc3RyaW5nXG59KTtcblxuY29uc3QgaW5pdGlhbFN0YXRlR2VuZXJhdG9yID0ganN2LmFycmF5KHRvZG9HZW5lcmF0b3IpO1xuXG5jb25zdCBpbml0aWFsU3RhdGVXaXRoVG9kbyA9IGpzdi5wYWlyKFxuICB0b2RvR2VuZXJhdG9yLFxuICBpbml0aWFsU3RhdGVHZW5lcmF0b3Jcbikuc21hcChcbiAgKFt0b2RvLCBpbml0aWFsU3RhdGVdKSA9PiBbdG9kbywgaW5pdGlhbFN0YXRlLmNvbmNhdCh0b2RvKV0sXG4gIChbdG9kbywgaW5pdGlhbFN0YXRlXSkgPT4gW3RvZG8sIGluaXRpYWxTdGF0ZS5zbGljZSgwLCAtMSldXG4pO1xuXG5jb25zdCBpbml0aWFsU3RhdGVXaXRob3V0VG9kbyA9IGpzdi5wYWlyKFxuICB0b2RvR2VuZXJhdG9yLFxuICBpbml0aWFsU3RhdGVHZW5lcmF0b3Jcbikuc21hcChcbiAgKFt0b2RvLCBpbml0aWFsU3RhdGVdKSA9PiBbdG9kbywgaW5pdGlhbFN0YXRlLmZpbHRlcigodCkgPT4gdC50ZXh0ID09PSB0b2RvLnRleHQpXSxcbiAgKFt0b2RvLCBpbml0aWFsU3RhdGVdKSA9PiBbdG9kbywgaW5pdGlhbFN0YXRlLmNvbmNhdCh0b2RvKV1cbik7XG5cbmRlc2NyaWJlKCd3aGVuIGRlbGV0aW5nIGEgdG9kbyB0aGF0IGV4aXN0cycsICgpID0+IHtcbiAganN2LnByb3BlcnR5KCdpdCByZW1vdmVzIHRoZSB0b2RvJywgaW5pdGlhbFN0YXRlV2l0aFRvZG8sXG4gICAgKFt0b2RvLCBpbml0aWFsU3RhdGVdKSA9PiB7XG4gICAgICBjb25zdCBuZXdTdGF0ZSA9IHRvZG9SZWR1Y2VyKGluaXRpYWxTdGF0ZSwgZGVsZXRlVG9kbyh0b2RvLnRleHQpKTtcblxuICAgICAgcmV0dXJuICFuZXdTdGF0ZS5pbmNsdWRlcyh0b2RvKTtcbiAgICB9XG4gICk7XG5cbiAgaXQoJ2l0IG9ubHkgcmVtb3ZlcyBhIHNpbmdsZSB0b2RvJywgKCkgPT4ge1xuICAgIGpzdi5hc3NlcnQoanN2LmZvcmFsbChpbml0aWFsU3RhdGVXaXRoVG9kbyxcbiAgICAgIChbdG9kbywgaW5pdGlhbFN0YXRlXSkgPT4ge1xuICAgICAgICBjb25zdCBuZXdTdGF0ZSA9IHRvZG9SZWR1Y2VyKGluaXRpYWxTdGF0ZSwgZGVsZXRlVG9kbyh0b2RvLnRleHQpKTtcblxuICAgICAgICByZXR1cm4gbmV3U3RhdGUubGVuZ3RoID09PSBpbml0aWFsU3RhdGUubGVuZ3RoIC0gMTtcbiAgICAgIH1cbiAgICApLCB7IHRlc3RzOiAxMDAwIH0pfVxuICApO1xufSk7XG5cbmRlc2NyaWJlKCd3aGVuIGRlbGV0aW5nIGEgdG9kbyB0aGF0IGRvZXMgbm90IGV4aXN0JywgKCkgPT4ge1xuICBqc3YucHJvcGVydHkoJ2l0IGRvZXMgbm90IG1vZGlmeSB0aGUgc3RhdGUnLCBpbml0aWFsU3RhdGVXaXRob3V0VG9kbyxcbiAgICAoW3RvZG8sIGluaXRpYWxTdGF0ZV0pID0+IHtcbiAgICAgIGNvbnN0IG5ld1N0YXRlID0gdG9kb1JlZHVjZXIoaW5pdGlhbFN0YXRlLCBkZWxldGVUb2RvKHRvZG8udGV4dCkpO1xuXG4gICAgICByZXR1cm4gZGVlcEVxdWFsKGluaXRpYWxTdGF0ZSwgbmV3U3RhdGUpO1xuICAgIH1cbiAgKTtcbn0pO1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "property.js"
+      ],
+      "names": [],
+      "mappings": ";;;;AAAA;;AACA;;AACA;;;;AACA;;;;;;AAEA,IAAM,gBAAgB,mBAAI,MAAJ,CAAW;AAC/B,QAAM,mBAAI;AADqB,CAAX,CAAtB;;AAIA,IAAM,wBAAwB,mBAAI,KAAJ,CAAU,aAAV,CAA9B;;AAEA,IAAM,uBAAuB,mBAAI,IAAJ,CAC3B,aAD2B,EAE3B,qBAF2B,EAG3B,IAH2B,CAI3B;AAAA;;AAAA,MAAE,IAAF;AAAA,MAAQ,YAAR;AAAA,SAA0B,CAAC,IAAD,EAAO,aAAa,MAAb,CAAoB,IAApB,CAAP,CAA1B;AAAA,CAJ2B,EAK3B;AAAA;;AAAA,MAAE,IAAF;AAAA,MAAQ,YAAR;AAAA,SAA0B,CAAC,IAAD,EAAO,aAAa,KAAb,CAAmB,CAAnB,EAAsB,CAAC,CAAvB,CAAP,CAA1B;AAAA,CAL2B,CAA7B;;AAQA,IAAM,0BAA0B,mBAAI,IAAJ,CAC9B,aAD8B,EAE9B,qBAF8B,EAG9B,IAH8B,CAI9B;AAAA;;AAAA,MAAE,IAAF;AAAA,MAAQ,YAAR;AAAA,SAA0B,CAAC,IAAD,EAAO,aAAa,MAAb,CAAoB,UAAC,CAAD;AAAA,WAAO,EAAE,IAAF,KAAW,KAAK,IAAvB;AAAA,GAApB,CAAP,CAA1B;AAAA,CAJ8B,EAK9B;AAAA;;AAAA,MAAE,IAAF;AAAA,MAAQ,YAAR;AAAA,SAA0B,CAAC,IAAD,EAAO,aAAa,MAAb,CAAoB,IAApB,CAAP,CAA1B;AAAA,CAL8B,CAAhC;;AAQA,SAAS,kCAAT,EAA6C,YAAM;AACjD,qBAAI,QAAJ,CAAa,qBAAb,EAAoC,oBAApC,EACE,iBAA0B;AAAA;;AAAA,QAAxB,IAAwB;AAAA,QAAlB,YAAkB;;AACxB,QAAM,WAAW,sBAAY,YAAZ,EAA0B,qBAAW,KAAK,IAAhB,CAA1B,CAAjB;;AAEA,WAAO,CAAC,SAAS,QAAT,CAAkB,IAAlB,CAAR;AACD,GALH;;AAQA,KAAG,+BAAH,EAAoC,YAAM;AACxC,uBAAI,MAAJ,CAAW,mBAAI,MAAJ,CAAW,oBAAX,EACT,kBAA0B;AAAA;;AAAA,UAAxB,IAAwB;AAAA,UAAlB,YAAkB;;AACxB,UAAM,WAAW,sBAAY,YAAZ,EAA0B,qBAAW,KAAK,IAAhB,CAA1B,CAAjB;;AAEA,aAAO,SAAS,MAAT,KAAoB,aAAa,MAAb,GAAsB,CAAjD;AACD,KALQ,CAAX,EAMG,EAAE,OAAO,IAAT,EANH;AAMoB,GAPtB;AASD,CAlBD;;AAoBA,SAAS,0CAAT,EAAqD,YAAM;AACzD,qBAAI,QAAJ,CAAa,8BAAb,EAA6C,uBAA7C,EACE,kBAA0B;AAAA;;AAAA,QAAxB,IAAwB;AAAA,QAAlB,YAAkB;;AACxB,QAAM,WAAW,sBAAY,YAAZ,EAA0B,qBAAW,KAAK,IAAhB,CAA1B,CAAjB;;AAEA,WAAO,yBAAU,YAAV,EAAwB,QAAxB,CAAP;AACD,GALH;AAOD,CARD",
+      "file": "property.js",
+      "sourcesContent": [
+        "import { todoReducer, deleteTodo, DELETE_TODO } from '../src';\nimport { assert } from 'chai';\nimport jsv from 'jsverify';\nimport deepEqual from 'deep-equal';\n\nconst todoGenerator = jsv.record({\n  text: jsv.asciinestring\n});\n\nconst initialStateGenerator = jsv.array(todoGenerator);\n\nconst initialStateWithTodo = jsv.pair(\n  todoGenerator,\n  initialStateGenerator\n).smap(\n  ([todo, initialState]) => [todo, initialState.concat(todo)],\n  ([todo, initialState]) => [todo, initialState.slice(0, -1)]\n);\n\nconst initialStateWithoutTodo = jsv.pair(\n  todoGenerator,\n  initialStateGenerator\n).smap(\n  ([todo, initialState]) => [todo, initialState.filter((t) => t.text === todo.text)],\n  ([todo, initialState]) => [todo, initialState.concat(todo)]\n);\n\ndescribe('when deleting a todo that exists', () => {\n  jsv.property('it removes the todo', initialStateWithTodo,\n    ([todo, initialState]) => {\n      const newState = todoReducer(initialState, deleteTodo(todo.text));\n\n      return !newState.includes(todo);\n    }\n  );\n\n  it('it only removes a single todo', () => {\n    jsv.assert(jsv.forall(initialStateWithTodo,\n      ([todo, initialState]) => {\n        const newState = todoReducer(initialState, deleteTodo(todo.text));\n\n        return newState.length === initialState.length - 1;\n      }\n    ), { tests: 1000 })}\n  );\n});\n\ndescribe('when deleting a todo that does not exist', () => {\n  jsv.property('it does not modify the state', initialStateWithoutTodo,\n    ([todo, initialState]) => {\n      const newState = todoReducer(initialState, deleteTodo(todo.text));\n\n      return deepEqual(initialState, newState);\n    }\n  );\n});\n"
+      ]
+    },
+    "mtime": 1465588467223
+  }
+}
